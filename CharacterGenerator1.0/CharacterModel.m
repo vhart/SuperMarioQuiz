@@ -15,9 +15,11 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
+        sharedMyManager.characterData = [[NSMutableArray alloc] init];
     });
     return sharedMyManager;
 }
+
 
 
 @end

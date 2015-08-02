@@ -12,4 +12,7 @@
 
 + (CharacterModel *)sharedModel;
 
+@property (nonatomic, strong) NSMutableArray *characterData;
+
+
 @end

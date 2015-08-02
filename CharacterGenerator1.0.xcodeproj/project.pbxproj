@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		C7F7F4DE1B6E949F00BD9395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4DD1B6E949F00BD9395 /* main.m */; };
 		C7F7F4E11B6E949F00BD9395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4E01B6E949F00BD9395 /* AppDelegate.m */; };
-		C7F7F4E41B6E949F00BD9395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4E31B6E949F00BD9395 /* ViewController.m */; };
 		C7F7F4E71B6E949F00BD9395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F7F4E51B6E949F00BD9395 /* Main.storyboard */; };
 		C7F7F4E91B6E949F00BD9395 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7F7F4E81B6E949F00BD9395 /* Images.xcassets */; };
 		C7F7F4EC1B6E949F00BD9395 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F7F4EA1B6E949F00BD9395 /* LaunchScreen.xib */; };
 		C7F7F4F81B6E949F00BD9395 /* CharacterGenerator1_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4F71B6E949F00BD9395 /* CharacterGenerator1_0Tests.m */; };
 		C7F7F5031B6E9B1000BD9395 /* CharacterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */; };
+		C7F7F5061B6E9F4E00BD9395 /* QuizController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F5051B6E9F4E00BD9395 /* QuizController.m */; };
+		C7F7F5091B6E9F8200BD9395 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F5081B6E9F8200BD9395 /* DetailView.m */; };
+		C7F7F50C1B6E9FBE00BD9395 /* SavedCharacterTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F50B1B6E9FBE00BD9395 /* SavedCharacterTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +35,6 @@
 		C7F7F4DD1B6E949F00BD9395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7F7F4DF1B6E949F00BD9395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7F7F4E01B6E949F00BD9395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C7F7F4E21B6E949F00BD9395 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C7F7F4E31B6E949F00BD9395 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C7F7F4E61B6E949F00BD9395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7F7F4E81B6E949F00BD9395 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7F7F4EB1B6E949F00BD9395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +43,12 @@
 		C7F7F4F71B6E949F00BD9395 /* CharacterGenerator1_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterGenerator1_0Tests.m; sourceTree = "<group>"; };
 		C7F7F5011B6E9B1000BD9395 /* CharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterModel.h; sourceTree = "<group>"; };
 		C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterModel.m; sourceTree = "<group>"; };
+		C7F7F5041B6E9F4E00BD9395 /* QuizController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizController.h; sourceTree = "<group>"; };
+		C7F7F5051B6E9F4E00BD9395 /* QuizController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizController.m; sourceTree = "<group>"; };
+		C7F7F5071B6E9F8200BD9395 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		C7F7F5081B6E9F8200BD9395 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
+		C7F7F50A1B6E9FBE00BD9395 /* SavedCharacterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCharacterTable.h; sourceTree = "<group>"; };
+		C7F7F50B1B6E9FBE00BD9395 /* SavedCharacterTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCharacterTable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +90,15 @@
 		C7F7F4DA1B6E949F00BD9395 /* CharacterGenerator1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				C7F7F5071B6E9F8200BD9395 /* DetailView.h */,
+				C7F7F5081B6E9F8200BD9395 /* DetailView.m */,
 				C7F7F4DF1B6E949F00BD9395 /* AppDelegate.h */,
 				C7F7F4E01B6E949F00BD9395 /* AppDelegate.m */,
-				C7F7F4E21B6E949F00BD9395 /* ViewController.h */,
-				C7F7F4E31B6E949F00BD9395 /* ViewController.m */,
+				C7F7F5041B6E9F4E00BD9395 /* QuizController.h */,
+				C7F7F5051B6E9F4E00BD9395 /* QuizController.m */,
 				C7F7F5011B6E9B1000BD9395 /* CharacterModel.h */,
+				C7F7F50A1B6E9FBE00BD9395 /* SavedCharacterTable.h */,
+				C7F7F50B1B6E9FBE00BD9395 /* SavedCharacterTable.m */,
 				C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */,
 				C7F7F4E51B6E949F00BD9395 /* Main.storyboard */,
 				C7F7F4E81B6E949F00BD9395 /* Images.xcassets */,
@@ -224,8 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7F7F4E41B6E949F00BD9395 /* ViewController.m in Sources */,
+				C7F7F5061B6E9F4E00BD9395 /* QuizController.m in Sources */,
 				C7F7F5031B6E9B1000BD9395 /* CharacterModel.m in Sources */,
+				C7F7F50C1B6E9FBE00BD9395 /* SavedCharacterTable.m in Sources */,
+				C7F7F5091B6E9F8200BD9395 /* DetailView.m in Sources */,
 				C7F7F4E11B6E949F00BD9395 /* AppDelegate.m in Sources */,
 				C7F7F4DE1B6E949F00BD9395 /* main.m in Sources */,
 			);

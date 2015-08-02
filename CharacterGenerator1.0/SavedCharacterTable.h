@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SavedCharacterTable.h
 //  CharacterGenerator1.0
 //
 //  Created by Varindra Hart on 8/2/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SavedCharacterTable : UITableViewController
 
 @end
-
