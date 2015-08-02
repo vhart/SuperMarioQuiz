@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOR-p5-o3Q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -37,7 +38,7 @@
         <!--Detail View-->
         <scene sceneID="Eyj-Z6-DPX">
             <objects>
-                <viewController id="vke-Cu-OCD" customClass="DetailView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewFromTable" id="vke-Cu-OCD" customClass="DetailView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DG1-Kk-ADl"/>
                         <viewControllerLayoutGuide type="bottom" id="EcL-KX-p0W"/>
@@ -98,17 +99,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-fD-tvN">
-                                <rect key="frame" x="277" y="470" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hST-EU-woH" kind="show" id="IAD-tA-cEh"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTF-Hb-C2D">
+                                <rect key="frame" x="16" y="64" width="568" height="487"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m09-s1-wLl">
+                                        <rect key="frame" x="8" y="118" width="39" height="30"/>
+                                        <state key="normal" title="Mario">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmB-KH-aHi">
+                                        <rect key="frame" x="8" y="151" width="33" height="30"/>
+                                        <state key="normal" title="Luigi">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmd-d6-ah4">
+                                        <rect key="frame" x="8" y="184" width="34" height="30"/>
+                                        <state key="normal" title="Toad">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dl6-iQ-7K6">
+                                        <rect key="frame" x="8" y="217" width="59" height="30"/>
+                                        <state key="normal" title="Princess">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEi-Jn-OfL">
+                                        <rect key="frame" x="8" y="89" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63529413940000001" green="0.84705889229999998" blue="0.91764712329999998" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iTF-Hb-C2D" firstAttribute="top" secondItem="l1y-YG-CIS" secondAttribute="bottom" id="Gal-yF-aa2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iTF-Hb-C2D" secondAttribute="trailing" id="MNt-fM-Hjv"/>
+                            <constraint firstItem="mH2-MT-WAH" firstAttribute="top" secondItem="iTF-Hb-C2D" secondAttribute="bottom" id="gwT-FN-f7h"/>
+                            <constraint firstItem="iTF-Hb-C2D" firstAttribute="leading" secondItem="NEL-6C-tSc" secondAttribute="leadingMargin" id="miZ-C2-wtT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="piR-h7-H37"/>
                 </viewController>

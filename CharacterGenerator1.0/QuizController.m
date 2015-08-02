@@ -10,6 +10,11 @@
 
 @interface QuizController ()
 
+@property (nonatomic) NSString *characterName;
+@property (nonatomic) NSString *locationLevel;
+@property (nonatomic) NSString *mission;
+@property (nonatomic) NSString *savedGameTag;
+
 @end
 
 @implementation QuizController
