@@ -434,6 +434,7 @@
 				C7F7F4FD1B6E949F00BD9395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7F7F4FE1B6E949F00BD9395 /* Build configuration list for PBXNativeTarget "CharacterGenerator1.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +443,7 @@
 				C7F7F5001B6E949F00BD9395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
