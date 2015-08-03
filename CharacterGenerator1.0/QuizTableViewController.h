@@ -1,5 +1,5 @@
 //
-//  QuizController.h
+//  QuizTableViewController.h
 //  CharacterGenerator1.0
 //
 //  Created by Varindra Hart on 8/2/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuizController : UIViewController
+@interface QuizTableViewController : UITableViewController
 
 @end

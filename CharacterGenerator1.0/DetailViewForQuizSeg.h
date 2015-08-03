@@ -1,5 +1,5 @@
 //
-//  DetailView.h
+//  DetailViewForQuizSeg.h
 //  CharacterGenerator1.0
 //
 //  Created by Varindra Hart on 8/2/15.
@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GameCharacter.h"
 
-@interface DetailView : UIViewController
-@property (nonatomic) GameCharacter *character;
+@interface DetailViewForQuizSeg : UIViewController
+
+@property (nonatomic) GameCharacter *characterToDisplay;
+
 @end

@@ -1,31 +1,28 @@
 //
-//  QuizController.m
+//  DetailViewForQuizSeg.m
 //  CharacterGenerator1.0
 //
 //  Created by Varindra Hart on 8/2/15.
 //  Copyright (c) 2015 Varindra Hart. All rights reserved.
 //
 
-#import "QuizController.h"
+#import "DetailViewForQuizSeg.h"
+#import "GameCharacter.h"
 
-@interface QuizController ()
-
-@property (nonatomic) NSString *characterName;
-@property (nonatomic) NSString *locationLevel;
-@property (nonatomic) NSString *mission;
-@property (nonatomic) NSString *savedGameTag;
-
+@interface DetailViewForQuizSeg ()
+@property (weak, nonatomic) IBOutlet UILabel *labelDummy;
 
 @end
 
-@implementation QuizController
+@implementation DetailViewForQuizSeg
 
 - (void)viewDidLoad {
+    self.labelDummy.text = [NSString stringWithFormat:@"%@ in %@.\nMission: %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
     [super viewDidLoad];
-    
-   
-    
     // Do any additional setup after loading the view.
+}
+- (IBAction)goBack:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7C9C87A1B6EF1890022C11F /* QuizTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C9C8791B6EF1890022C11F /* QuizTableViewController.m */; };
+		C7C9C87D1B6F19670022C11F /* DetailViewForQuizSeg.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C9C87C1B6F19670022C11F /* DetailViewForQuizSeg.m */; };
+		C7C9C8801B6F1ABF0022C11F /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C9C87F1B6F1ABF0022C11F /* GameCharacter.m */; };
 		C7F7F4DE1B6E949F00BD9395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4DD1B6E949F00BD9395 /* main.m */; };
 		C7F7F4E11B6E949F00BD9395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4E01B6E949F00BD9395 /* AppDelegate.m */; };
 		C7F7F4E71B6E949F00BD9395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F7F4E51B6E949F00BD9395 /* Main.storyboard */; };
@@ -14,7 +17,6 @@
 		C7F7F4EC1B6E949F00BD9395 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F7F4EA1B6E949F00BD9395 /* LaunchScreen.xib */; };
 		C7F7F4F81B6E949F00BD9395 /* CharacterGenerator1_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F4F71B6E949F00BD9395 /* CharacterGenerator1_0Tests.m */; };
 		C7F7F5031B6E9B1000BD9395 /* CharacterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */; };
-		C7F7F5061B6E9F4E00BD9395 /* QuizController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F5051B6E9F4E00BD9395 /* QuizController.m */; };
 		C7F7F5091B6E9F8200BD9395 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F5081B6E9F8200BD9395 /* DetailView.m */; };
 		C7F7F50C1B6E9FBE00BD9395 /* SavedCharacterTable.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7F50B1B6E9FBE00BD9395 /* SavedCharacterTable.m */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7C9C8781B6EF1890022C11F /* QuizTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizTableViewController.h; sourceTree = "<group>"; };
+		C7C9C8791B6EF1890022C11F /* QuizTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizTableViewController.m; sourceTree = "<group>"; };
+		C7C9C87B1B6F19670022C11F /* DetailViewForQuizSeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewForQuizSeg.h; sourceTree = "<group>"; };
+		C7C9C87C1B6F19670022C11F /* DetailViewForQuizSeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewForQuizSeg.m; sourceTree = "<group>"; };
+		C7C9C87E1B6F1ABF0022C11F /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
+		C7C9C87F1B6F1ABF0022C11F /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 		C7F7F4D81B6E949F00BD9395 /* CharacterGenerator1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterGenerator1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F7F4DC1B6E949F00BD9395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7F7F4DD1B6E949F00BD9395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,8 +51,6 @@
 		C7F7F4F71B6E949F00BD9395 /* CharacterGenerator1_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterGenerator1_0Tests.m; sourceTree = "<group>"; };
 		C7F7F5011B6E9B1000BD9395 /* CharacterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterModel.h; sourceTree = "<group>"; };
 		C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterModel.m; sourceTree = "<group>"; };
-		C7F7F5041B6E9F4E00BD9395 /* QuizController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizController.h; sourceTree = "<group>"; };
-		C7F7F5051B6E9F4E00BD9395 /* QuizController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizController.m; sourceTree = "<group>"; };
 		C7F7F5071B6E9F8200BD9395 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
 		C7F7F5081B6E9F8200BD9395 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		C7F7F50A1B6E9FBE00BD9395 /* SavedCharacterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCharacterTable.h; sourceTree = "<group>"; };
@@ -90,16 +96,20 @@
 		C7F7F4DA1B6E949F00BD9395 /* CharacterGenerator1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				C7C9C8781B6EF1890022C11F /* QuizTableViewController.h */,
+				C7C9C8791B6EF1890022C11F /* QuizTableViewController.m */,
+				C7C9C87E1B6F1ABF0022C11F /* GameCharacter.h */,
+				C7C9C87F1B6F1ABF0022C11F /* GameCharacter.m */,
+				C7C9C87B1B6F19670022C11F /* DetailViewForQuizSeg.h */,
+				C7C9C87C1B6F19670022C11F /* DetailViewForQuizSeg.m */,
 				C7F7F5071B6E9F8200BD9395 /* DetailView.h */,
 				C7F7F5081B6E9F8200BD9395 /* DetailView.m */,
 				C7F7F4DF1B6E949F00BD9395 /* AppDelegate.h */,
 				C7F7F4E01B6E949F00BD9395 /* AppDelegate.m */,
-				C7F7F5041B6E9F4E00BD9395 /* QuizController.h */,
-				C7F7F5051B6E9F4E00BD9395 /* QuizController.m */,
+				C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */,
 				C7F7F5011B6E9B1000BD9395 /* CharacterModel.h */,
 				C7F7F50A1B6E9FBE00BD9395 /* SavedCharacterTable.h */,
 				C7F7F50B1B6E9FBE00BD9395 /* SavedCharacterTable.m */,
-				C7F7F5021B6E9B1000BD9395 /* CharacterModel.m */,
 				C7F7F4E51B6E949F00BD9395 /* Main.storyboard */,
 				C7F7F4E81B6E949F00BD9395 /* Images.xcassets */,
 				C7F7F4EA1B6E949F00BD9395 /* LaunchScreen.xib */,
@@ -234,11 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7F7F5061B6E9F4E00BD9395 /* QuizController.m in Sources */,
 				C7F7F5031B6E9B1000BD9395 /* CharacterModel.m in Sources */,
+				C7C9C8801B6F1ABF0022C11F /* GameCharacter.m in Sources */,
 				C7F7F50C1B6E9FBE00BD9395 /* SavedCharacterTable.m in Sources */,
 				C7F7F5091B6E9F8200BD9395 /* DetailView.m in Sources */,
 				C7F7F4E11B6E949F00BD9395 /* AppDelegate.m in Sources */,
+				C7C9C87D1B6F19670022C11F /* DetailViewForQuizSeg.m in Sources */,
+				C7C9C87A1B6EF1890022C11F /* QuizTableViewController.m in Sources */,
 				C7F7F4DE1B6E949F00BD9395 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

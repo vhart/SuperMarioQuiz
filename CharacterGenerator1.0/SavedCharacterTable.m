@@ -8,6 +8,7 @@
 
 #import "SavedCharacterTable.h"
 #import "CharacterModel.h"
+#import "GameCharacter.h"
 #import "DetailView.h"
 
 @interface SavedCharacterTable ()
@@ -17,7 +18,7 @@
 @implementation SavedCharacterTable
 
 - (void)viewDidLoad {
-    [self.tableView reloadData];
+    
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -25,6 +26,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,8 +57,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CharacterCell" forIndexPath:indexPath];
     
-    //GameCharacter *character = [CharacterModel sharedModel].characterData[indexPath.row];
-    //cell.textLabel.text = character.tagName;
+    GameCharacter *character = [[CharacterModel sharedModel].characterData objectAtIndex:indexPath.row];
+    cell.textLabel.text = character.gamerTag;
     
     return cell;
 }
@@ -92,11 +99,11 @@
 */
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    //GameCharacter *character = [CharacterModel sharedModel].characterData[indexPath.row];
-//    DetailView *nextView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewFromTable"];
-//    nextView.character = character;
-//    [self.navigationController pushViewController:nextView animated:YES];
-//    
+    GameCharacter *character = [CharacterModel sharedModel].characterData[indexPath.row];
+    DetailView *nextView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewFromTable"];
+    nextView.character = character;
+    [self.navigationController pushViewController:nextView animated:YES];
+    
     
 }
 /*

@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOR-p5-o3Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MKM-H0-KoK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="EBl-c9-pcD">
-            <objects>
-                <tableViewController id="weB-bW-a7g" customClass="SavedCharacterTable" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SPa-6x-bG1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" id="BSL-z8-BtS">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BSL-z8-BtS" id="aI4-Ar-0bL">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="weB-bW-a7g" id="53Y-Oz-pI0"/>
-                            <outlet property="delegate" destination="weB-bW-a7g" id="x2Z-E9-yIB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ZIh-gF-ADC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uH8-t0-xIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1948" y="648"/>
-        </scene>
         <!--Detail View-->
         <scene sceneID="Eyj-Z6-DPX">
             <objects>
@@ -48,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLw-vM-3Hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="648"/>
+            <point key="canvasLocation" x="3051" y="540"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mri-Op-hhB">
@@ -60,12 +33,45 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="weB-bW-a7g" kind="relationship" relationship="rootViewController" id="wvw-e0-mFN"/>
+                        <segue destination="lFk-RA-Yhp" kind="relationship" relationship="rootViewController" id="UO2-rm-sd1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nj-Q5-ge9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="968" y="648"/>
+        </scene>
+        <!--Characters-->
+        <scene sceneID="dc0-96-pz6">
+            <objects>
+                <tableViewController id="lFk-RA-Yhp" customClass="SavedCharacterTable" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="R0c-hd-dTv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" id="zUg-Gg-eLE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zUg-Gg-eLE" id="Azl-kd-rFC">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lFk-RA-Yhp" id="YdL-7j-Mtd"/>
+                            <outlet property="delegate" destination="lFk-RA-Yhp" id="6j5-dW-6NG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Characters" id="jyp-ao-zSY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UqS-78-x5D">
+                            <connections>
+                                <segue destination="rky-Rh-BCl" kind="presentation" id="bKs-gz-jTr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Be4-z6-2iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="490"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D5K-5i-BNE">
@@ -82,12 +88,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR1-Ho-Hjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968" y="-196"/>
+            <point key="canvasLocation" x="1636" y="-82"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Quiz Table View Controller-->
         <scene sceneID="8sk-bH-7Qd">
             <objects>
-                <tableViewController id="elY-qW-wcs" sceneMemberID="viewController">
+                <tableViewController id="elY-qW-wcs" customClass="QuizTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hOm-LG-XDN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,24 +123,36 @@
                                                     <state key="normal" title="a) Mamma's Lasagna">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="eA6-KE-KNj"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y16-s5-hDv">
                                                     <rect key="frame" x="35" y="174" width="228" height="30"/>
                                                     <state key="normal" title="b) Mamma's Spaghetti">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="yQd-7V-mkC"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uM-ug-eFb">
                                                     <rect key="frame" x="35" y="212" width="228" height="30"/>
                                                     <state key="normal" title="c) Mushroom Pizza">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="XPT-Je-fvk"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWZ-aB-u8k">
                                                     <rect key="frame" x="35" y="250" width="228" height="30"/>
                                                     <state key="normal" title="d) Kale Salad">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="BfW-ti-toX"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUPER MARIO BROS, THE QUIZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-iW-bIS">
                                                     <rect key="frame" x="14" y="8" width="552" height="38"/>
@@ -158,18 +176,27 @@
                                                     <state key="normal" title="a) At the beach">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="vtC-ha-73L"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLI-Se-LX5">
                                                     <rect key="frame" x="35" y="369" width="228" height="30"/>
                                                     <state key="normal" title="b) In a tree">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="qEu-sI-5ky"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ZY-aEe">
                                                     <rect key="frame" x="35" y="407" width="228" height="30"/>
                                                     <state key="normal" title="c) In a volcano">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="H7x-ci-Yqc"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3) Tell me your hopes and dreams? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-UE-CcE">
                                                     <rect key="frame" x="14" y="468" width="552" height="21"/>
@@ -182,24 +209,36 @@
                                                     <state key="normal" title="a) TOTAL WORLD DOMINATION">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="qn8-4j-YrA"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBH-Kt-Hmi">
                                                     <rect key="frame" x="35" y="535" width="228" height="30"/>
                                                     <state key="normal" title="b) True love">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="b8O-1Z-6pP"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3To-VO-UCc">
                                                     <rect key="frame" x="35" y="573" width="228" height="30"/>
                                                     <state key="normal" title="c) I want to be rich">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="NDR-KH-1Mf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwS-x4-8zm">
                                                     <rect key="frame" x="158" y="662" width="62" height="30"/>
                                                     <state key="normal" title="TELL ME">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="hST-EU-woH" kind="show" id="61U-Gr-Ol9"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -219,47 +258,72 @@
                     <navigationItem key="navigationItem" id="zc2-ZK-xcS"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="gamerTag" destination="NWt-Ou-w3q" id="ZUa-xP-w5g"/>
+                        <outletCollection property="questionOneButtons" destination="QT4-YL-z4i" id="3Rp-8V-On1"/>
+                        <outletCollection property="questionOneButtons" destination="y16-s5-hDv" id="qQQ-Yc-VC8"/>
+                        <outletCollection property="questionOneButtons" destination="8uM-ug-eFb" id="oWQ-EE-U0B"/>
+                        <outletCollection property="questionOneButtons" destination="sWZ-aB-u8k" id="q4M-oT-fxo"/>
+                        <outletCollection property="questionTwoButtons" destination="dmR-eY-qAH" id="cw2-B3-buI"/>
+                        <outletCollection property="questionTwoButtons" destination="tLI-Se-LX5" id="zpL-AI-rFf"/>
+                        <outletCollection property="questionTwoButtons" destination="9Oo-ZY-aEe" id="gPz-8I-mo9"/>
+                        <outletCollection property="questionThreeButtons" destination="cDe-0l-gbd" id="3U2-Ar-WVY"/>
+                        <outletCollection property="questionThreeButtons" destination="fBH-Kt-Hmi" id="EDX-jv-7ue"/>
+                        <outletCollection property="questionThreeButtons" destination="3To-VO-UCc" id="gIO-6S-E3c"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScR-gQ-VDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="-16"/>
+            <point key="canvasLocation" x="2383" y="-468"/>
         </scene>
-        <!--Detail View-->
+        <!--Detail View For Quiz Seg-->
         <scene sceneID="6wA-mB-7iI">
             <objects>
-                <viewController id="hST-EU-woH" customClass="DetailView" sceneMemberID="viewController">
+                <viewController id="hST-EU-woH" customClass="DetailViewForQuizSeg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VTU-gj-LKL"/>
                         <viewControllerLayoutGuide type="bottom" id="sHn-Bh-gwZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8c8-b4-Vxh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-2p-mxn">
+                                <rect key="frame" x="231" y="906" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xrt-4E-E4Y"/>
+                                </constraints>
+                                <state key="normal" title="Cool! Let's Go Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="hST-EU-woH" eventType="touchUpInside" id="TSr-6v-9p0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzl-f4-zh0">
+                                <rect key="frame" x="26" y="40" width="548" height="416"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sHn-Bh-gwZ" firstAttribute="top" secondItem="ZKo-2p-mxn" secondAttribute="bottom" constant="64" id="125-Di-Qug"/>
+                            <constraint firstItem="Uzl-f4-zh0" firstAttribute="top" secondItem="VTU-gj-LKL" secondAttribute="bottom" constant="20" id="MRF-sY-074"/>
+                            <constraint firstAttribute="centerX" secondItem="ZKo-2p-mxn" secondAttribute="centerX" id="QEI-4t-Gug"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uzl-f4-zh0" secondAttribute="trailing" constant="10" id="dWF-ek-L4z"/>
+                            <constraint firstItem="ZKo-2p-mxn" firstAttribute="top" secondItem="Uzl-f4-zh0" secondAttribute="bottom" constant="50" id="sfO-bm-oJc"/>
+                            <constraint firstItem="Uzl-f4-zh0" firstAttribute="leading" secondItem="8c8-b4-Vxh" secondAttribute="leadingMargin" constant="10" id="tFQ-BN-9dN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDummy" destination="Uzl-f4-zh0" id="WbV-NK-r5T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mc-Ek-qFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="-180"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="V5l-TJ-cRE">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BOR-p5-o3Q" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="gpc-Uy-WZn">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="rky-Rh-BCl" kind="relationship" relationship="viewControllers" id="3jW-wX-LO0"/>
-                        <segue destination="MKM-H0-KoK" kind="relationship" relationship="viewControllers" id="km3-Rw-GdA"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCN-ZH-SZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="90" y="204"/>
+            <point key="canvasLocation" x="3113" y="-262"/>
         </scene>
     </scenes>
 </document>
