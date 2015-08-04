@@ -8,8 +8,15 @@
 
 #import "DetailViewForQuizSeg.h"
 #import "GameCharacter.h"
+#import <AVFoundation/AVFoundation.h> // added for sounds
+
 
 @interface DetailViewForQuizSeg ()
+
+{
+    AVAudioPlayer *_audioPlayer; // added for sounds
+}
+
 @property (weak, nonatomic) IBOutlet UILabel *labelDummy;
 
 @end
@@ -20,8 +27,16 @@
     self.labelDummy.text = [NSString stringWithFormat:@"%@ in %@.\nMission: %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Construct URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/coin.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
 }
 - (IBAction)goBack:(UIButton *)sender {
+    [_audioPlayer play]; // added for sounds
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

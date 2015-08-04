@@ -9,8 +9,16 @@
 #import "QuizTableViewController.h"
 #import "CharacterModel.h"
 #import "DetailViewForQuizSeg.h"
+#import <AVFoundation/AVFoundation.h> // this allows us to include sounds! 
+
 
 @interface QuizTableViewController ()
+
+{
+    AVAudioPlayer *_audioPlayer; // for jump sound
+    AVAudioPlayer *_audioPlayer2; // for coin sound
+}
+
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *questionOneButtons;
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *questionTwoButtons;
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *questionThreeButtons;
@@ -22,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *gamerTag;
 
 -(void) enableButtonsDisableButton:(UIButton *)button fromArray:(NSArray *)array;
+
 
 @end
 
@@ -35,6 +44,18 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // this adds jump noises
+    NSString *path = [NSString stringWithFormat:@"%@/jump.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    // this adds coin noises
+    NSString *path2 = [NSString stringWithFormat:@"%@/coin.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
 }
 
 - (IBAction)questionAnswered:(UIButton *)sender{
@@ -43,6 +64,7 @@
         if (sender == button) {
             found = YES;
             [self enableButtonsDisableButton:button fromArray:self.questionOneButtons];
+            
             self.food = [[button.currentTitle substringFromIndex:3]lowercaseString];
             return;
         }
@@ -83,6 +105,7 @@
 - (void) enableButtonsDisableButton:(UIButton *)button fromArray:(NSArray *)array{
     
     for (UIButton *arrayButtons in array) {
+        [_audioPlayer play]; // added for jump sound
         if (arrayButtons == button) {
             arrayButtons.enabled = NO;
         }
@@ -90,8 +113,12 @@
             arrayButtons.enabled = YES;
         }
     }
-    
 }
+- (IBAction)tellMeButton:(id)sender { // added outlet method
+     [_audioPlayer2 play]; // plays coin sound when pressed
+}
+
+
 #pragma mark - Table view data source
 //
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

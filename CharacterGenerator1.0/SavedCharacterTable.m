@@ -10,6 +10,8 @@
 #import "CharacterModel.h"
 #import "GameCharacter.h"
 #import "DetailView.h"
+#import <AVFoundation/AVFoundation.h> // for sounds!!
+
 
 @interface SavedCharacterTable ()
 
