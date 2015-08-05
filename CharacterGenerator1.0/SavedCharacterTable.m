@@ -28,7 +28,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
 }
+
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -40,6 +43,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// attempting to change tableview text...
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    cell.textLabel.textColor=[UIColor blackColor];
+//    cell.detailTextLabel.font=[UIFont fontWithName:@"Emulogic" size:12.0];
+//    cell.detailTextLabel.textColor=[UIColor blackColor];
+//}
 
 #pragma mark - Table view data source
 

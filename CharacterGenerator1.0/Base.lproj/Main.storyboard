@@ -24,6 +24,7 @@
             <string>Emulogic</string>
             <string>Emulogic</string>
             <string>Emulogic</string>
+            <string>Emulogic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -70,13 +71,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="m3W-5r-mJc">
-                            <rect key="frame" x="0.0" y="64" width="600" height="170"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="251"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Mario Bros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v51-Ia-SVf">
+                                    <rect key="frame" x="140" y="32" width="320" height="25"/>
+                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE QUIZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9K-Kv-w0D">
+                                    <rect key="frame" x="228" y="65" width="144" height="22.5"/>
+                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="18"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipes" translatesAutoresizingMaskIntoConstraints="NO" id="UcG-vX-gHP">
+                                    <rect key="frame" x="0.0" y="101" width="600" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="J14-pz-QfZ"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="UcG-vX-gHP" secondAttribute="trailing" id="2dg-6X-c8W"/>
+                                <constraint firstAttribute="centerX" secondItem="v51-Ia-SVf" secondAttribute="centerX" id="Doz-ya-esZ"/>
+                                <constraint firstAttribute="bottom" secondItem="UcG-vX-gHP" secondAttribute="bottom" id="XNT-3v-2Bc"/>
+                                <constraint firstItem="UcG-vX-gHP" firstAttribute="leading" secondItem="m3W-5r-mJc" secondAttribute="leading" id="c58-qj-NiE"/>
+                                <constraint firstItem="U9K-Kv-w0D" firstAttribute="top" secondItem="v51-Ia-SVf" secondAttribute="bottom" constant="8" id="jX1-Kh-tft"/>
+                                <constraint firstAttribute="centerX" secondItem="U9K-Kv-w0D" secondAttribute="centerX" id="rS2-In-WaS"/>
+                                <constraint firstItem="v51-Ia-SVf" firstAttribute="top" secondItem="m3W-5r-mJc" secondAttribute="top" constant="32" id="zCT-cH-uzN"/>
+                            </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="uK9-ia-Rsy">
-                            <rect key="frame" x="0.0" y="300" width="600" height="301"/>
+                            <rect key="frame" x="0.0" y="432" width="600" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -85,6 +116,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zUg-Gg-eLE" id="Azl-kd-rFC">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -180,15 +212,20 @@
                                                         <constraint firstAttribute="height" constant="50" id="kfR-iQ-svL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1) What is your favorite food? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-xp-BvT">
-                                                    <rect key="frame" x="14" y="107" width="552" height="21"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your gamer name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWt-Ou-w3q">
+                                                    <rect key="frame" x="13" y="43" width="273" height="30"/>
                                                     <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1) What is your favorite food? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-xp-BvT">
+                                                    <rect key="frame" x="13" y="98" width="413" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QT4-YL-z4i">
-                                                    <rect key="frame" x="35" y="136" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <rect key="frame" x="35" y="127" width="228" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
                                                     <state key="normal" title="a) Mamma's Lasagna">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -197,8 +234,8 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y16-s5-hDv">
-                                                    <rect key="frame" x="35" y="174" width="267" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <rect key="frame" x="35" y="165" width="257" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
                                                     <state key="normal" title="b) Mamma's Spaghetti">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -207,8 +244,8 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uM-ug-eFb">
-                                                    <rect key="frame" x="35" y="212" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <rect key="frame" x="35" y="203" width="228" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
                                                     <state key="normal" title="c) Mushroom Pizza">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -217,8 +254,8 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWZ-aB-u8k">
-                                                    <rect key="frame" x="35" y="250" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <rect key="frame" x="35" y="241" width="228" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
                                                     <state key="normal" title="d) Kale Salad">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -226,27 +263,16 @@
                                                         <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="BfW-ti-toX"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUPER MARIO BROS, THE QUIZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-iW-bIS">
-                                                    <rect key="frame" x="14" y="8" width="552" height="38"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your gamer name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWt-Ou-w3q">
-                                                    <rect key="frame" x="14" y="48" width="226" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2) You have the day off, where do you go? " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-hx-zYt">
-                                                    <rect key="frame" x="14" y="302" width="552" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2) How do you relax?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-hx-zYt">
+                                                    <rect key="frame" x="13" y="293" width="507" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmR-eY-qAH">
-                                                    <rect key="frame" x="35" y="331" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
-                                                    <state key="normal" title="a) To the beach">
+                                                    <rect key="frame" x="35" y="322" width="228" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
+                                                    <state key="normal" title="a) go to the beach">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -254,9 +280,9 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLI-Se-LX5">
-                                                    <rect key="frame" x="35" y="369" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
-                                                    <state key="normal" title="b) Up a tree">
+                                                    <rect key="frame" x="35" y="360" width="228" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
+                                                    <state key="normal" title="b) Climb a tree">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -264,25 +290,25 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-ZY-aEe">
-                                                    <rect key="frame" x="35" y="407" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
-                                                    <state key="normal" title="c) Into a volcano">
+                                                    <rect key="frame" x="35" y="398" width="240" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
+                                                    <state key="normal" title="c) Explore a volcano">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="questionAnswered:" destination="elY-qW-wcs" eventType="touchUpInside" id="H7x-ci-Yqc"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3) Tell me your hopes and dreams? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-UE-CcE">
-                                                    <rect key="frame" x="14" y="468" width="552" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3) Your hopes and dreams? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-UE-CcE">
+                                                    <rect key="frame" x="13" y="459" width="419" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-0l-gbd">
-                                                    <rect key="frame" x="35" y="497" width="330" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
-                                                    <state key="normal" title="a) TOTAL WORLD DOMINATION">
+                                                    <rect key="frame" x="35" y="488" width="330" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
+                                                    <state key="normal" title="a) WORLD DOMINATION">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -290,8 +316,8 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBH-Kt-Hmi">
-                                                    <rect key="frame" x="35" y="535" width="228" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <rect key="frame" x="35" y="526" width="228" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
                                                     <state key="normal" title="b) True love">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -300,8 +326,8 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3To-VO-UCc">
-                                                    <rect key="frame" x="35" y="573" width="287" height="30"/>
-                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
+                                                    <rect key="frame" x="35" y="564" width="287" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="10"/>
                                                     <state key="normal" title="c) I want to be rich">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -328,6 +354,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="R3e-Gp-Pvy" secondAttribute="bottom" constant="-8" id="EAS-DZ-lfT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="E5c-UK-jXt" secondAttribute="trailing" constant="10" id="ErP-kK-C34"/>
                                                 <constraint firstItem="R3e-Gp-Pvy" firstAttribute="leading" secondItem="KeX-Li-zTH" secondAttribute="leadingMargin" constant="-16" id="FyA-JO-Rgj"/>
+                                                <constraint firstItem="NWt-Ou-w3q" firstAttribute="leading" secondItem="KeX-Li-zTH" secondAttribute="leadingMargin" constant="5" id="HPt-zf-BRA"/>
                                                 <constraint firstItem="R3e-Gp-Pvy" firstAttribute="leading" secondItem="KeX-Li-zTH" secondAttribute="leadingMargin" id="LJA-9k-ym8"/>
                                                 <constraint firstAttribute="centerX" secondItem="dwS-x4-8zm" secondAttribute="centerX" id="QrF-KP-UCe"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dwS-x4-8zm" secondAttribute="bottom" constant="22" id="S0g-8S-ALM"/>
@@ -335,6 +362,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="R3e-Gp-Pvy" secondAttribute="trailing" constant="-10" id="aAv-af-evm"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bkw-m2-hZP" secondAttribute="bottom" constant="62" id="fbz-7M-T3C"/>
                                                 <constraint firstItem="q1m-Uf-9ca" firstAttribute="leading" secondItem="bkw-m2-hZP" secondAttribute="trailing" id="hWw-hD-rUO"/>
+                                                <constraint firstItem="NWt-Ou-w3q" firstAttribute="top" secondItem="KeX-Li-zTH" secondAttribute="topMargin" constant="35" id="hoJ-ka-Nf5"/>
                                                 <constraint firstItem="p0O-Mk-Krq" firstAttribute="top" secondItem="KeX-Li-zTH" secondAttribute="topMargin" constant="50" id="nc8-Hi-5JR"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="q1m-Uf-9ca" secondAttribute="bottom" constant="62" id="qIt-a3-zNt"/>
                                                 <constraint firstItem="E5c-UK-jXt" firstAttribute="top" secondItem="p0O-Mk-Krq" secondAttribute="bottom" constant="100" id="qmN-ZN-D05"/>
@@ -490,6 +518,7 @@
         <image name="goomba" width="106" height="82"/>
         <image name="ground" width="2392" height="162"/>
         <image name="ground2" width="2864" height="426"/>
+        <image name="pipes" width="2382" height="702"/>
         <image name="trees" width="424" height="86"/>
     </resources>
 </document>

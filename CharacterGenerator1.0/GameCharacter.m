@@ -20,16 +20,16 @@
     self.options = @{
                  @"mamma's lasagna"            : @"Mario",
                  @"mamma's spaghetti"          : @"Luigi",
-                 @"mushroom pizza"         : @"Yoshi",
-                 @"kale salad"            : @"Princess Peach",
+                 @"mushroom pizza"             : @"Toad",
+                 @"kale salad"                 : @"Princess Peach",
                  
-                 @"total world domination" : @"Fight Bowser",
-                 @"true love"             : @"save Princess Peach",
-                 @"i want to be rich"            : @"Get 100 coins!",
+                 @"total world domination"     : @"Fight Bowser",
+                 @"true love"                  : @"save Princess Peach",
+                 @"i want to be rich"          : @"Get 100 coins!",
                  
-                 @"at the beach"         : @"Your venturing through the Water World!",
-                 @"in a volcano"       : @"Survive the Heat in the Lava World!",
-                 @"in a tree"           : @"Navigate the Jungle in the Forest World!",
+                 @"at the beach"               : @"Your venturing through the Water World!",
+                 @"in a volcano"               : @"Survive the Heat in the Lava World!",
+                 @"in a tree"                  : @"Navigate the Jungle in the Forest World!",
                  };
     
     if (self = [super init]) {
