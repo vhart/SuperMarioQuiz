@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Instructions!" message:@"Welcome! To get started go ahead and press the '+' button in the upper right hand corner!" delegate:self cancelButtonTitle:@"Got it!" otherButtonTitles: nil];
+    [alert show];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

@@ -183,8 +183,11 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     GameCharacter *character = [[GameCharacter alloc] initWithFood:self.food hobby:self.location goal:self.goal andGamerTag:self.gamerTag.text];
+    
     [[CharacterModel sharedModel].characterData addObject:character];
+    
     DetailViewForQuizSeg *view = [segue destinationViewController];
+    
     view.characterToDisplay = character;
    
 }
