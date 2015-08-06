@@ -36,10 +36,10 @@
     
     // adding animated header:
     animatedHeader.animationImages = [NSArray arrayWithObjects:
-                                      [UIImage imageNamed:@"header1.png"],
-                                      [UIImage imageNamed:@"header2.png"],
-                                      [UIImage imageNamed:@"header3.png"],
-                                      [UIImage imageNamed:@"header4.png"], nil];
+                                      [UIImage imageNamed:@"header01.png"],
+                                      [UIImage imageNamed:@"header02.png"],
+                                      [UIImage imageNamed:@"header03.png"],
+                                      [UIImage imageNamed:@"header04.png"], nil];
   
     [animatedHeader setAnimationRepeatCount:0]; // 0 = it will run forever!!
     animatedHeader.animationDuration = 1.0; // will switch images every 1 second
