@@ -23,13 +23,13 @@
                  @"mushroom pizza"             : @"Toad",
                  @"kale salad"                 : @"Princess Peach",
                  
-                 @"total world domination"     : @"Fight Bowser",
-                 @"true love"                  : @"save Princess Peach",
-                 @"i want to be rich"          : @"Get 100 coins!",
+                 @"world domination"     : @"fight Bowser!",
+                 @"true love"                  : @"save Princess Peach!",
+                 @"i want to be rich"          : @"get 100 coins!",
                  
-                 @"at the beach"               : @"Your venturing through the Water World!",
-                 @"in a volcano"               : @"Survive the Heat in the Lava World!",
-                 @"in a tree"                  : @"Navigate the Jungle in the Forest World!",
+                 @"go to the beach"               : @"venture through the Water World",
+                 @"explore a volcano"               : @"survive the burning heat of the Lava World",
+                 @"climb a tree"                  : @"navigate the Jungle in the Forest World",
                  };
     
     if (self = [super init]) {

@@ -24,7 +24,7 @@
 @implementation DetailViewForQuizSeg
 
 - (void)viewDidLoad {
-    self.labelDummy.text = [NSString stringWithFormat:@"%@ in %@.\nMission: %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
+    self.labelDummy.text = [NSString stringWithFormat:@"%@, you must %@ and %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     

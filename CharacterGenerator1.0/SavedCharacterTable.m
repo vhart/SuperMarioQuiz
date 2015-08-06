@@ -14,6 +14,7 @@
 
 
 @interface SavedCharacterTable ()
+@property (nonatomic) AVAudioPlayer *player;
 
 @end
 
@@ -23,6 +24,14 @@
     
     [super viewDidLoad];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Instructions!" message:@"Welcome! To get started go ahead and press the '+' button in the upper right hand corner!" delegate:self cancelButtonTitle:@"Got it!" otherButtonTitles: nil];
+    
+    //path to mp3 as per Shena's example in the quizcontroller
+    NSString *path = [NSString stringWithFormat:@"%@/oneup.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    //initialize player with mp3
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
     [alert show];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -74,7 +83,7 @@
     
     GameCharacter *character = [[CharacterModel sharedModel].characterData objectAtIndex:indexPath.row];
     cell.textLabel.text = character.gamerTag;
-    
+    cell.textLabel.font = [UIFont fontWithName:@"emulogic" size:14];
     return cell;
 }
 
@@ -113,6 +122,8 @@
 }
 */
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //play sound when clicked
+    [self.player play];
     
     GameCharacter *character = [CharacterModel sharedModel].characterData[indexPath.row];
     DetailView *nextView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewFromTable"];
