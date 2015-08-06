@@ -34,6 +34,18 @@
     
     [alert show];
     
+    // adding animated header:
+    animatedHeader.animationImages = [NSArray arrayWithObjects:
+                                      [UIImage imageNamed:@"header1.png"],
+                                      [UIImage imageNamed:@"header2.png"],
+                                      [UIImage imageNamed:@"header3.png"],
+                                      [UIImage imageNamed:@"header4.png"], nil];
+  
+    [animatedHeader setAnimationRepeatCount:0]; // 0 = it will run forever!!
+    animatedHeader.animationDuration = 1.0; // will switch images every 1 second
+    [animatedHeader startAnimating]; // start animation!
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

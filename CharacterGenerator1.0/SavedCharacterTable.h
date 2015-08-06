@@ -10,4 +10,9 @@
 
 @interface SavedCharacterTable : UITableViewController
 
+// add outlet for animation
+{
+    IBOutlet UIImageView *animatedHeader;
+}
+
 @end

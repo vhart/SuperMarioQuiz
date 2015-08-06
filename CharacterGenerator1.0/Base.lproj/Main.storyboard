@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MKM-H0-KoK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MKM-H0-KoK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="emulogic.ttf">
-            <string>Emulogic</string>
-            <string>Emulogic</string>
             <string>Emulogic</string>
             <string>Emulogic</string>
             <string>Emulogic</string>
@@ -73,43 +71,47 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="m3W-5r-mJc">
-                            <rect key="frame" x="0.0" y="64" width="600" height="251"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="154"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Mario Bros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v51-Ia-SVf">
-                                    <rect key="frame" x="140" y="32" width="320" height="25"/>
-                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="20"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE QUIZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9K-Kv-w0D">
-                                    <rect key="frame" x="228" y="65" width="144" height="23"/>
-                                    <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="18"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipes" translatesAutoresizingMaskIntoConstraints="NO" id="UcG-vX-gHP">
-                                    <rect key="frame" x="0.0" y="101" width="600" height="150"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-h1-JBr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="154"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="J14-pz-QfZ"/>
+                                        <constraint firstAttribute="height" constant="154" id="fN4-Cv-meU"/>
+                                        <constraint firstAttribute="width" constant="600" id="q9U-7d-9nd"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="UcG-vX-gHP" secondAttribute="trailing" id="2dg-6X-c8W"/>
-                                <constraint firstAttribute="centerX" secondItem="v51-Ia-SVf" secondAttribute="centerX" id="Doz-ya-esZ"/>
-                                <constraint firstAttribute="bottom" secondItem="UcG-vX-gHP" secondAttribute="bottom" id="XNT-3v-2Bc"/>
-                                <constraint firstItem="UcG-vX-gHP" firstAttribute="leading" secondItem="m3W-5r-mJc" secondAttribute="leading" id="c58-qj-NiE"/>
-                                <constraint firstItem="U9K-Kv-w0D" firstAttribute="top" secondItem="v51-Ia-SVf" secondAttribute="bottom" constant="8" id="jX1-Kh-tft"/>
-                                <constraint firstAttribute="centerX" secondItem="U9K-Kv-w0D" secondAttribute="centerX" id="rS2-In-WaS"/>
-                                <constraint firstItem="v51-Ia-SVf" firstAttribute="top" secondItem="m3W-5r-mJc" secondAttribute="top" constant="32" id="zCT-cH-uzN"/>
+                                <constraint firstAttribute="trailing" secondItem="QVB-h1-JBr" secondAttribute="trailing" id="7E1-XX-Hob"/>
+                                <constraint firstItem="QVB-h1-JBr" firstAttribute="top" secondItem="m3W-5r-mJc" secondAttribute="top" id="BRg-fe-e0z"/>
+                                <constraint firstItem="QVB-h1-JBr" firstAttribute="leading" secondItem="m3W-5r-mJc" secondAttribute="leading" id="UeK-QU-GQt"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="uK9-ia-Rsy">
-                            <rect key="frame" x="0.0" y="432" width="600" height="300"/>
+                            <rect key="frame" x="0.0" y="451" width="600" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pipes" translatesAutoresizingMaskIntoConstraints="NO" id="UcG-vX-gHP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="J14-pz-QfZ"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="J14-pz-QfZ"/>
+                                        </mask>
+                                    </variation>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="UcG-vX-gHP" secondAttribute="bottom" id="837-IM-1I8"/>
+                                <constraint firstItem="UcG-vX-gHP" firstAttribute="leading" secondItem="uK9-ia-Rsy" secondAttribute="leading" id="ayc-vx-Ftg"/>
+                                <constraint firstItem="UcG-vX-gHP" firstAttribute="top" secondItem="uK9-ia-Rsy" secondAttribute="top" id="bbd-Wb-gJu"/>
+                                <constraint firstAttribute="trailing" secondItem="UcG-vX-gHP" secondAttribute="trailing" id="c2U-ex-rxQ"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" id="zUg-Gg-eLE">
@@ -132,10 +134,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animatedHeader" destination="QVB-h1-JBr" id="vWA-eu-rFR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be4-z6-2iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031" y="487"/>
+            <point key="canvasLocation" x="2329" y="565"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D5K-5i-BNE">

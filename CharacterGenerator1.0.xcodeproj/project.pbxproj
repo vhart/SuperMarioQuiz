@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D00AB571B73CECC003EF45C /* header1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB531B73CECC003EF45C /* header1.png */; };
+		4D00AB581B73CECC003EF45C /* header2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB541B73CECC003EF45C /* header2.png */; };
+		4D00AB591B73CECC003EF45C /* header3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB551B73CECC003EF45C /* header3.png */; };
+		4D00AB5A1B73CECC003EF45C /* header4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB561B73CECC003EF45C /* header4.png */; };
 		4D66D7DC1B71459D00009A76 /* emulogic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7DB1B71453500009A76 /* emulogic.ttf */; };
 		4D66D7DD1B7145A400009A76 /* emulogic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7DB1B71453500009A76 /* emulogic.ttf */; };
 		4D66D7E21B71500200009A76 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66D7E11B71500200009A76 /* AVFoundation.framework */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D00AB531B73CECC003EF45C /* header1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header1.png; sourceTree = "<group>"; };
+		4D00AB541B73CECC003EF45C /* header2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header2.png; sourceTree = "<group>"; };
+		4D00AB551B73CECC003EF45C /* header3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header3.png; sourceTree = "<group>"; };
+		4D00AB561B73CECC003EF45C /* header4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header4.png; sourceTree = "<group>"; };
 		4D66D7DB1B71453500009A76 /* emulogic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = emulogic.ttf; sourceTree = "<group>"; };
 		4D66D7E11B71500200009A76 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4D66D7E31B71548E00009A76 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 		C7F7F4DB1B6E949F00BD9395 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D00AB531B73CECC003EF45C /* header1.png */,
+				4D00AB541B73CECC003EF45C /* header2.png */,
+				4D00AB551B73CECC003EF45C /* header3.png */,
+				4D00AB561B73CECC003EF45C /* header4.png */,
 				C7F7F4DC1B6E949F00BD9395 /* Info.plist */,
 				C7F7F4DD1B6E949F00BD9395 /* main.m */,
 			);
@@ -244,8 +256,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D00AB571B73CECC003EF45C /* header1.png in Resources */,
 				C7F7F4E71B6E949F00BD9395 /* Main.storyboard in Resources */,
+				4D00AB5A1B73CECC003EF45C /* header4.png in Resources */,
+				4D00AB581B73CECC003EF45C /* header2.png in Resources */,
 				4D66D7DC1B71459D00009A76 /* emulogic.ttf in Resources */,
+				4D00AB591B73CECC003EF45C /* header3.png in Resources */,
 				C7F7F4EC1B6E949F00BD9395 /* LaunchScreen.xib in Resources */,
 				4D66D7E71B71550600009A76 /* jump.mp3 in Resources */,
 				C7F7F4E91B6E949F00BD9395 /* Images.xcassets in Resources */,
