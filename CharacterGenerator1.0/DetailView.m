@@ -15,6 +15,7 @@
 
 {
     AVAudioPlayer *_audioPlayer; // added for sounds
+    AVAudioPlayer *_audioPlayer2;
 }
 @property (weak, nonatomic) IBOutlet UILabel *SavedCharacterLabel;
 
@@ -37,6 +38,13 @@
     
     // Create audio player object and initialize with URL to sound
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+
+    // added for random item sound
+    NSString *path2 = [NSString stringWithFormat:@"%@/item.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
+    _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
+    
     
     //if character doesn't have a random object yet, then the question box will appear animated
     if(!self.character.randomItemDecided){
@@ -65,6 +73,7 @@
 
 //if the random box button is enabled this will allow user to generate an object
 - (IBAction)randomBoxSelected:(UIButton *)sender {
+    [_audioPlayer2 play];
     [self.character generateRandomObject]; //generate
     self.randomBox.enabled = NO; //disable button
     
