@@ -18,6 +18,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *labelDummy;
+@property (weak, nonatomic) IBOutlet UIButton *coolBackButton; // button customization
 
 @end
 
@@ -34,6 +35,10 @@
     
     // Create audio player object and initialize with URL to sound
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    self.coolBackButton.layer.cornerRadius = 10.0; // rounds corners
+    self.coolBackButton.layer.borderWidth = 3.0; // border width
+    self.coolBackButton.layer.borderColor = [[UIColor blackColor]CGColor]; // set border color
 }
 - (IBAction)goBack:(UIButton *)sender {
     [_audioPlayer play]; // added for sounds

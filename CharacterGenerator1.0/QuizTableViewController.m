@@ -23,6 +23,8 @@
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *questionTwoButtons;
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *questionThreeButtons;
 
+@property (nonatomic, weak) IBOutlet UIButton *tellMeButton; // for button
+
 @property (nonatomic) NSString *food;
 @property (nonatomic) NSString *location;
 @property (nonatomic) NSString *goal;
@@ -56,6 +58,10 @@
     NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
     // Create audio player object and initialize with URL to sound
     _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
+    
+    self.tellMeButton.layer.cornerRadius = 10.0; // rounds corners
+    self.tellMeButton.layer.borderWidth = 3.0; // border width
+    self.tellMeButton.layer.borderColor = [[UIColor blackColor]CGColor]; // set border color
 }
 
 - (IBAction)questionAnswered:(UIButton *)sender{

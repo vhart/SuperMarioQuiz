@@ -396,6 +396,7 @@
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="gamerTag" destination="NWt-Ou-w3q" id="ZUa-xP-w5g"/>
+                        <outlet property="tellMeButton" destination="dwS-x4-8zm" id="IGz-jq-5ML"/>
                         <outletCollection property="questionOneButtons" destination="QT4-YL-z4i" id="3Rp-8V-On1"/>
                         <outletCollection property="questionOneButtons" destination="y16-s5-hDv" id="qQQ-Yc-VC8"/>
                         <outletCollection property="questionOneButtons" destination="8uM-ug-eFb" id="oWQ-EE-U0B"/>
@@ -506,6 +507,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="coolBackButton" destination="ZKo-2p-mxn" id="XSc-cx-37R"/>
                         <outlet property="labelDummy" destination="Uzl-f4-zh0" id="WbV-NK-r5T"/>
                     </connections>
                 </viewController>
