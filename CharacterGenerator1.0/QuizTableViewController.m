@@ -17,6 +17,7 @@
 {
     AVAudioPlayer *_audioPlayer; // for jump sound
     AVAudioPlayer *_audioPlayer2; // for coin sound
+    AVAudioPlayer *_audioPlayer3; //  for pause sound
 }
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *questionOneButtons;
@@ -58,6 +59,13 @@
     NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
     // Create audio player object and initialize with URL to sound
     _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
+    
+    // this adds pause noises
+    NSString *path3 = [NSString stringWithFormat:@"%@/pause.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl3 = [NSURL fileURLWithPath:path3];
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl3 error:nil];
+
     
     self.tellMeButton.layer.cornerRadius = 10.0; // rounds corners
     self.tellMeButton.layer.borderWidth = 3.0; // border width
@@ -124,9 +132,6 @@
         }
     }
 }
-- (IBAction)tellMeButton:(id)sender { // added outlet method
-     [_audioPlayer2 play]; // plays coin sound when pressed
-}
 
 
 -(BOOL)quizCompleted{
@@ -139,64 +144,6 @@
     
 }
 
-#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
 
@@ -207,6 +154,9 @@
     //if quiz completed comes back as NO, segue is not called
     if (![self quizCompleted]){
         
+        //if quiz incomplete play the pause sound
+        [_audioPlayer3 play];
+        
         //Presents an AlertView to alert user that a field is missing
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incomplete!" message:@"We'd love to show you the result but it seems you forgot to answer one or more of the questions" delegate:self cancelButtonTitle:@"Got It!" otherButtonTitles: nil];
@@ -214,6 +164,9 @@
         return NO;
         
     }
+    
+    //if quiz IS complete play the coin sound
+    [_audioPlayer2 play];
     
     return YES;
     
