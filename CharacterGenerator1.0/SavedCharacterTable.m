@@ -45,7 +45,7 @@
     animatedHeader.animationDuration = 1.0; // will switch images every 1 second
     [animatedHeader startAnimating]; // start animation!
     
-    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
 }
 
@@ -54,6 +54,7 @@
     [super viewWillAppear:YES];
     
     [self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +63,11 @@
 }
 
 
+//if edit is enabled when the view is swapped, this will disable it, so upon returning we arent in editing mode
+-(void) viewWillDisappear:(BOOL)animated{
+    [self setEditing:NO animated:YES];
+    
+}
 
 #pragma mark - Table view data source
 
@@ -81,9 +87,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CharacterCell" forIndexPath:indexPath];
     
+    
     GameCharacter *character = [[CharacterModel sharedModel].characterData objectAtIndex:indexPath.row];
     cell.textLabel.text = character.gamerTag;
     cell.textLabel.font = [UIFont fontWithName:@"emulogic" size:14];
+    
+    //in the case that the reusable cell still contains the image of a previously deleted cell we can wipe it
+    cell.imageView.image = nil;
+    
     
     //if the character has a random object then set the image on the cell to that object
     if(character.randomItemDecided){
@@ -91,11 +102,14 @@
     }
     
     else{
+        
         //otherwise it hasnt been set and should be a question mark box. 
         cell.imageView.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"questionBox0"],[UIImage imageNamed:@"questionBox1"], nil];
+        
         //load up images to be animated
         cell.imageView.animationDuration = .7;
         cell.imageView.animationRepeatCount = 0;//infite animation
+        
         //begin animating
         [cell.imageView startAnimating];
     }
@@ -126,6 +140,22 @@
     
     
 }
+
+//delegate method that allows for editing when the edit button is clicked
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        
+        [[CharacterModel sharedModel].characterData removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+        
+        //entry removed from data source now reload
+        [self.tableView reloadData];
+        
+    }
+}
+
 
 
 @end
