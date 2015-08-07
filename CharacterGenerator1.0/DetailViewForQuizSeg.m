@@ -28,8 +28,14 @@
 - (void)viewDidLoad {
     self.labelDummy.text = [NSString stringWithFormat:@"%@, you must %@ and %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
     
+    //if character doesn't have a random object yet, then the question box will appear animated
     if(!self.characterToDisplay.randomItemDecided){
         [self.randomBoxButton setBackgroundImage:[UIImage animatedImageNamed:@"questionBox" duration:.7] forState:UIControlStateNormal];
+    }
+    
+    //otherwise if the character has an object just display the object
+    else{
+        [self.randomBoxButton setBackgroundImage:self.characterToDisplay.randomItem forState:UIControlStateNormal];
     }
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -48,6 +54,15 @@
 - (IBAction)goBack:(UIButton *)sender {
     [_audioPlayer play]; // added for sounds
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)randomBoxSelected:(UIButton *)sender {
+    
+    [self.characterToDisplay generateRandomObject];
+    
+    self.randomBoxButton.enabled = NO;
+    
+    [self.randomBoxButton setBackgroundImage:self.characterToDisplay.randomItem forState:UIControlStateDisabled];
 }
 
 - (void)didReceiveMemoryWarning {

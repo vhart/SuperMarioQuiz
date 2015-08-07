@@ -20,6 +20,6 @@
 @property (nonatomic) UIImage *randomItem;
 
 - (instancetype) initWithFood:(NSString *)food hobby:(NSString *)hobby goal:(NSString*)goal andGamerTag:(NSString *)gamerTag;
-
+- (void)generateRandomObject;
 
 @end

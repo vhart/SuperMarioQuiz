@@ -10,6 +10,7 @@
 
 @interface GameCharacter()
 @property (nonatomic) NSDictionary *options;
+@property (nonatomic) NSArray *randomObjects_Images;
 
 
 @end
@@ -47,6 +48,17 @@
     return nil;
 }
 
-
+-(void) generateRandomObject{
+    self.randomObjects_Images = @[
+                                  [UIImage imageNamed:@"fireflower.png"],
+                                  [UIImage imageNamed:@"ghost.png"],
+                                  [UIImage imageNamed:@"mushroom.png"],
+                                  [UIImage imageNamed:@"star.png"],
+                                  ];
+    NSInteger indexForObject = arc4random_uniform(4);
+    self.randomItem = self.randomObjects_Images[indexForObject];
+    self.randomItemDecided = YES;
+    
+}
 
 @end

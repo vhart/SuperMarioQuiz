@@ -473,6 +473,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="randomBoxSelected:" destination="hST-EU-woH" eventType="touchUpInside" id="htX-VE-HBG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.81960784313725488" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
