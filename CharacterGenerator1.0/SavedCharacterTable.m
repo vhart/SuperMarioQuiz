@@ -96,6 +96,27 @@
     GameCharacter *character = [[CharacterModel sharedModel].characterData objectAtIndex:indexPath.row];
     cell.textLabel.text = character.gamerTag;
     cell.textLabel.font = [UIFont fontWithName:@"emulogic" size:14];
+    
+    if(character.randomItemDecided){
+    cell.imageView.image = character.randomItem;
+    }
+    
+    else{
+        cell.imageView.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"questionBox0"],[UIImage imageNamed:@"questionBox1"], nil];
+        cell.imageView.animationDuration = .7;
+        cell.imageView.animationRepeatCount = 0;
+        [cell.imageView startAnimating];
+    }
+    
+    CGSize itemSize = CGSizeMake(40, 40);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+    
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    [cell.imageView.image drawInRect:imageRect];
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
     return cell;
 }
 
