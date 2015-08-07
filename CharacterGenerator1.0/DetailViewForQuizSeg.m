@@ -14,7 +14,8 @@
 @interface DetailViewForQuizSeg ()
 
 {
-    AVAudioPlayer *_audioPlayer; // added for sounds
+    AVAudioPlayer *_audioPlayer; // added for coin sounds
+    AVAudioPlayer *_audioPlayer2; // added for random item sound
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *labelDummy;
@@ -40,19 +41,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Construct URL to sound file
+    // added for coin sound
     NSString *path = [NSString stringWithFormat:@"%@/coin.mp3", [[NSBundle mainBundle] resourcePath]];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
-    
-    // Create audio player object and initialize with URL to sound
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    // added for random item sound
+    NSString *path2 = [NSString stringWithFormat:@"%@/item.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
+    _audioPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
     
     self.coolBackButton.layer.cornerRadius = 10.0; // rounds corners
     self.coolBackButton.layer.borderWidth = 3.0; // border width
     self.coolBackButton.layer.borderColor = [[UIColor blackColor]CGColor]; // set border color
 }
 - (IBAction)goBack:(UIButton *)sender {
-    [_audioPlayer play]; // added for sounds
+    [_audioPlayer play]; // added for coin sounds
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -63,6 +67,8 @@
     self.randomBoxButton.enabled = NO;
     
     [self.randomBoxButton setBackgroundImage:self.characterToDisplay.randomItem forState:UIControlStateDisabled];
+    
+    [_audioPlayer2 play]; // added for random item sound
 }
 
 - (void)didReceiveMemoryWarning {

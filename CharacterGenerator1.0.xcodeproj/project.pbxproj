@@ -15,6 +15,8 @@
 		4D00AB641B73D71B003EF45C /* header01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB5D1B73D71B003EF45C /* header01.png */; };
 		4D00AB651B73D71B003EF45C /* header03.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB5E1B73D71B003EF45C /* header03.png */; };
 		4D00AB661B73D71B003EF45C /* header03.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D00AB5E1B73D71B003EF45C /* header03.png */; };
+		4D31CF181B750C59007BCA36 /* item.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D31CF171B750C59007BCA36 /* item.mp3 */; };
+		4D31CF191B750C59007BCA36 /* item.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D31CF171B750C59007BCA36 /* item.mp3 */; };
 		4D66D7DC1B71459D00009A76 /* emulogic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7DB1B71453500009A76 /* emulogic.ttf */; };
 		4D66D7DD1B7145A400009A76 /* emulogic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7DB1B71453500009A76 /* emulogic.ttf */; };
 		4D66D7E21B71500200009A76 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66D7E11B71500200009A76 /* AVFoundation.framework */; };
@@ -53,6 +55,7 @@
 		4D00AB5C1B73D71B003EF45C /* header04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header04.png; sourceTree = "<group>"; };
 		4D00AB5D1B73D71B003EF45C /* header01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header01.png; sourceTree = "<group>"; };
 		4D00AB5E1B73D71B003EF45C /* header03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header03.png; sourceTree = "<group>"; };
+		4D31CF171B750C59007BCA36 /* item.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = item.mp3; sourceTree = "<group>"; };
 		4D66D7DB1B71453500009A76 /* emulogic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = emulogic.ttf; sourceTree = "<group>"; };
 		4D66D7E11B71500200009A76 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4D66D7E31B71548E00009A76 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 				4D66D7E61B71550600009A76 /* jump.mp3 */,
 				4D66D7E31B71548E00009A76 /* coin.mp3 */,
 				4D66D7E91B71554E00009A76 /* oneup.mp3 */,
+				4D31CF171B750C59007BCA36 /* item.mp3 */,
 				C7F7F4E81B6E949F00BD9395 /* Images.xcassets */,
 				C7F7F4EA1B6E949F00BD9395 /* LaunchScreen.xib */,
 				C7F7F4DB1B6E949F00BD9395 /* Supporting Files */,
@@ -265,6 +269,7 @@
 				4D00AB5F1B73D71B003EF45C /* header02.png in Resources */,
 				C7F7F4EC1B6E949F00BD9395 /* LaunchScreen.xib in Resources */,
 				4D66D7E71B71550600009A76 /* jump.mp3 in Resources */,
+				4D31CF181B750C59007BCA36 /* item.mp3 in Resources */,
 				4D00AB631B73D71B003EF45C /* header01.png in Resources */,
 				C7F7F4E91B6E949F00BD9395 /* Images.xcassets in Resources */,
 				4D00AB611B73D71B003EF45C /* header04.png in Resources */,
@@ -280,6 +285,7 @@
 			files = (
 				4D00AB621B73D71B003EF45C /* header04.png in Resources */,
 				4D00AB641B73D71B003EF45C /* header01.png in Resources */,
+				4D31CF191B750C59007BCA36 /* item.mp3 in Resources */,
 				4D00AB601B73D71B003EF45C /* header02.png in Resources */,
 				4D00AB661B73D71B003EF45C /* header03.png in Resources */,
 				4D66D7DD1B7145A400009A76 /* emulogic.ttf in Resources */,
