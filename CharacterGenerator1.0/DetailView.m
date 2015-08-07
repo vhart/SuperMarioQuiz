@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *randomBox;
 
+@property (weak, nonatomic) IBOutlet UIButton *coolGoBackButton;
 
 @end
 
@@ -37,11 +38,38 @@
     // Create audio player object and initialize with URL to sound
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     
+    //if character doesn't have a random object yet, then the question box will appear animated
+    if(!self.character.randomItemDecided){
+        [self.randomBox setBackgroundImage:[UIImage animatedImageNamed:@"questionBox" duration:.7] forState:UIControlStateNormal];
+    }
+    
+    //otherwise if the character has an object just display the object
+    else{
+        self.randomBox.enabled = NO;
+        [self.randomBox setBackgroundImage:self.character.randomItem forState:UIControlStateDisabled];
+    }
+
+    
+    self.coolGoBackButton.layer.cornerRadius = 10.0; // rounds corners
+    self.coolGoBackButton.layer.borderWidth = 3.0; // border width
+    self.coolGoBackButton.layer.borderColor = [[UIColor blackColor]CGColor]; // set border color
 
 }
 - (IBAction)goBack:(UIButton *)sender {
     [_audioPlayer play]; // added for sounds
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    //Use this method to dismiss the viewcontroller programmatically, no segue needed
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
+//if the random box button is enabled this will allow user to generate an object
+- (IBAction)randomBoxSelected:(UIButton *)sender {
+    [self.character generateRandomObject]; //generate
+    self.randomBox.enabled = NO; //disable button
+    
+    //set image
+    [self.randomBox setBackgroundImage:self.character.randomItem forState:UIControlStateDisabled];
 }
 
 - (void)didReceiveMemoryWarning {

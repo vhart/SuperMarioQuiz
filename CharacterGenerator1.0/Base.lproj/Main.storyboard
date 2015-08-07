@@ -25,7 +25,6 @@
             <string>Emulogic</string>
             <string>Emulogic</string>
             <string>Emulogic</string>
-            <string>Emulogic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -568,19 +567,17 @@
                                     <constraint firstAttribute="height" constant="50" id="fYI-TV-Cjj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n13-fD-FhO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n13-fD-FhO">
                                 <rect key="frame" x="270" y="395" width="60" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="AXF-YK-f37"/>
                                     <constraint firstAttribute="width" constant="60" id="PYH-9Z-Wjk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Emulogic" family="Emulogic" pointSize="12"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goBack:" destination="j8b-Na-rds" eventType="touchUpInside" id="oxW-78-ccF"/>
+                                    <action selector="randomBoxSelected:" destination="j8b-Na-rds" eventType="touchUpInside" id="1or-SY-gk7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-qu-Mga">
@@ -594,6 +591,9 @@
                                 <state key="normal" title=" Cool, Let's Go Back! ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack:" destination="j8b-Na-rds" eventType="touchUpInside" id="c1i-lr-Chj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.81960784310000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -626,6 +626,7 @@
                     </view>
                     <connections>
                         <outlet property="SavedCharacterLabel" destination="Zdu-wu-NJ3" id="9ec-CB-NQs"/>
+                        <outlet property="coolGoBackButton" destination="WbH-qu-Mga" id="uTi-Zx-FbR"/>
                         <outlet property="randomBox" destination="n13-fD-FhO" id="FVz-fm-doY"/>
                     </connections>
                 </viewController>
