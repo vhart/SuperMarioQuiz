@@ -29,7 +29,7 @@
     self.labelDummy.text = [NSString stringWithFormat:@"%@, you must %@ and %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
     
     if(!self.characterToDisplay.randomItemDecided){
-        [self.randomBoxButton setBackgroundImage:[UIImage animatedImageNamed:@"questionBox" duration:1.0] forState:UIControlStateNormal];
+        [self.randomBoxButton setBackgroundImage:[UIImage animatedImageNamed:@"questionBox" duration:.7] forState:UIControlStateNormal];
     }
     [super viewDidLoad];
     // Do any additional setup after loading the view.
