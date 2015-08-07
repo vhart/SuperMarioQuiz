@@ -3,7 +3,7 @@
 //  CharacterGenerator1.0
 //
 //  Created by Varindra Hart on 8/2/15.
-//  Copyright (c) 2015 Varindra Hart.👸 All rights reserved.
+//  Copyright (c) 2015 Varindra Hart 👸, Shena Yoshida 🍄 and Bereket Ghebremedhin 🐸. All rights reserved.
 //
 
 #import "SavedCharacterTable.h"
