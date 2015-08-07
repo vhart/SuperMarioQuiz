@@ -97,11 +97,13 @@
     cell.textLabel.text = character.gamerTag;
     cell.textLabel.font = [UIFont fontWithName:@"emulogic" size:14];
     
+    //if the character has a random object then set the image on the cell to that object
     if(character.randomItemDecided){
     cell.imageView.image = character.randomItem;
     }
     
     else{
+        //otherwise it hasnt been set and should be a question mark box. 
         cell.imageView.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"questionBox0"],[UIImage imageNamed:@"questionBox1"], nil];
         cell.imageView.animationDuration = .7;
         cell.imageView.animationRepeatCount = 0;
