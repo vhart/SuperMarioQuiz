@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface GameCharacter : NSObject
 
@@ -16,7 +17,7 @@
 @property (nonatomic) NSString *mission;
 @property (nonatomic) NSString *item;
 @property (nonatomic) BOOL randomItemDecided;
-@property (nonatomic) NSString *random;
+@property (nonatomic) UIImage *randomItem;
 
 - (instancetype) initWithFood:(NSString *)food hobby:(NSString *)hobby goal:(NSString*)goal andGamerTag:(NSString *)gamerTag;
 

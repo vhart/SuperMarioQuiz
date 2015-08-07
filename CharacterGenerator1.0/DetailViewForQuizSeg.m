@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelDummy;
 @property (weak, nonatomic) IBOutlet UIButton *coolBackButton; // button customization
+@property (weak, nonatomic) IBOutlet UIButton *randomBoxButton;
 
 @end
 
@@ -26,6 +27,10 @@
 
 - (void)viewDidLoad {
     self.labelDummy.text = [NSString stringWithFormat:@"%@, you must %@ and %@", self.characterToDisplay.characterName, self.characterToDisplay.locationName, self.characterToDisplay.mission];
+    
+    if(!self.characterToDisplay.randomItemDecided){
+        [self.randomBoxButton setBackgroundImage:[UIImage animatedImageNamed:@"questionBox" duration:1.0] forState:UIControlStateNormal];
+    }
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     

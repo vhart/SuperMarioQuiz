@@ -64,18 +64,21 @@
     self.tellMeButton.layer.borderColor = [[UIColor blackColor]CGColor]; // set border color
 }
 
+//determines which button to record as answer
 - (IBAction)questionAnswered:(UIButton *)sender{
+    //found is NO until the button is found
     BOOL found = NO;
     for (UIButton *button in self.questionOneButtons) {
         if (sender == button) {
             found = YES;
+            //When YES, send the array and button over to be disabled
             [self enableButtonsDisableButton:button fromArray:self.questionOneButtons];
             
             self.food = [[button.currentTitle substringFromIndex:3]lowercaseString];
             return;
         }
     }
-    
+    //repeat for question 2 if the button wasn't found
     if (found == NO) {
         for (UIButton *button in self.questionTwoButtons) {
             if (sender == button) {
@@ -87,7 +90,7 @@
         }
         
     }
-    
+    //repeat for question 3 if button wasn't found
     if (found == NO) {
         for (UIButton *button in self.questionThreeButtons) {
             if (sender == button) {
@@ -109,9 +112,10 @@
 }
 
 - (void) enableButtonsDisableButton:(UIButton *)button fromArray:(NSArray *)array{
-    
+    //Cycle through array to disable clicked button
     for (UIButton *arrayButtons in array) {
         [_audioPlayer play]; // added for jump sound
+        
         if (arrayButtons == button) {
             arrayButtons.enabled = NO;
         }
@@ -124,6 +128,16 @@
      [_audioPlayer2 play]; // plays coin sound when pressed
 }
 
+
+-(BOOL)quizCompleted{
+    //makes sure user completed the quiz entirely
+    if ([self.gamerTag.text isEqualToString: @""] || self.location == nil || self.food==nil || self.goal==nil){
+        return NO;
+    }
+    
+    return YES;
+    
+}
 
 #pragma mark - Table view data source
 //
@@ -187,8 +201,26 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+
+//Called before prepare for segue, determines if to segue or not
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    //if quiz completed comes back as NO, segue is not called
+    if (![self quizCompleted]){
+        
+        //Presents an AlertView to alert user that a field is missing
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incomplete!" message:@"We'd love to show you the result but it seems you forgot to answer one or more of the questions" delegate:self cancelButtonTitle:@"Got It!" otherButtonTitles: nil];
+        [alert show];
+        return NO;
+        
+    }
+    
+    return YES;
+    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    GameCharacter *character = [[GameCharacter alloc] initWithFood:self.food hobby:self.location goal:self.goal andGamerTag:self.gamerTag.text];
+        GameCharacter *character = [[GameCharacter alloc] initWithFood:self.food hobby:self.location goal:self.goal andGamerTag:self.gamerTag.text];
     
     [[CharacterModel sharedModel].characterData addObject:character];
     

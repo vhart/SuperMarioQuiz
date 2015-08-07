@@ -10,4 +10,6 @@
 
 @interface QuizTableViewController : UITableViewController
 
+-(BOOL)quizCompleted;
+
 @end
