@@ -15,6 +15,7 @@
 
 @interface SavedCharacterTable ()
 @property (nonatomic) AVAudioPlayer *player;
+@property (nonatomic) AVAudioPlayer *player2; // bricksmash sound
 
 @end
 
@@ -31,6 +32,14 @@
     
     //initialize player with mp3
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    // add brick smash sound
+    NSString *path2 = [NSString stringWithFormat:@"%@/bricksmash.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl2 = [NSURL fileURLWithPath:path2];
+    
+    //initialize player with mp3
+    self.player2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl2 error:nil];
+    
     
     [alert show];
     
@@ -147,6 +156,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         
+        [_player2 play]; // bricksmash
         [[CharacterModel sharedModel].characterData removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
         

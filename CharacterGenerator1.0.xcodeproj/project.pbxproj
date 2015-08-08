@@ -26,6 +26,8 @@
 		4D66D7E81B71550600009A76 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7E61B71550600009A76 /* jump.mp3 */; };
 		4D66D7EA1B71554E00009A76 /* oneup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7E91B71554E00009A76 /* oneup.mp3 */; };
 		4D66D7EB1B71554E00009A76 /* oneup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D66D7E91B71554E00009A76 /* oneup.mp3 */; };
+		4DD97D2E1B7646F700D012A7 /* bricksmash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DD97D2D1B7646F700D012A7 /* bricksmash.mp3 */; };
+		4DD97D2F1B7646F700D012A7 /* bricksmash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DD97D2D1B7646F700D012A7 /* bricksmash.mp3 */; };
 		C7C9C87A1B6EF1890022C11F /* QuizTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C9C8791B6EF1890022C11F /* QuizTableViewController.m */; };
 		C7C9C87D1B6F19670022C11F /* DetailViewForQuizSeg.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C9C87C1B6F19670022C11F /* DetailViewForQuizSeg.m */; };
 		C7C9C8801B6F1ABF0022C11F /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C9C87F1B6F1ABF0022C11F /* GameCharacter.m */; };
@@ -62,6 +64,7 @@
 		4D66D7E31B71548E00009A76 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
 		4D66D7E61B71550600009A76 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump.mp3; sourceTree = "<group>"; };
 		4D66D7E91B71554E00009A76 /* oneup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oneup.mp3; sourceTree = "<group>"; };
+		4DD97D2D1B7646F700D012A7 /* bricksmash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bricksmash.mp3; sourceTree = "<group>"; };
 		C7C9C8781B6EF1890022C11F /* QuizTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizTableViewController.h; sourceTree = "<group>"; };
 		C7C9C8791B6EF1890022C11F /* QuizTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizTableViewController.m; sourceTree = "<group>"; };
 		C7C9C87B1B6F19670022C11F /* DetailViewForQuizSeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewForQuizSeg.h; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				4D66D7DB1B71453500009A76 /* emulogic.ttf */,
 				4D66D7E61B71550600009A76 /* jump.mp3 */,
 				4D66D7E31B71548E00009A76 /* coin.mp3 */,
+				4DD97D2D1B7646F700D012A7 /* bricksmash.mp3 */,
 				4D66D7E91B71554E00009A76 /* oneup.mp3 */,
 				4D31CF171B750C59007BCA36 /* item.mp3 */,
 				C7C9C8831B751FA50022C11F /* pause.mp3 */,
@@ -280,6 +284,7 @@
 				4D66D7EA1B71554E00009A76 /* oneup.mp3 in Resources */,
 				C7C9C8841B751FA50022C11F /* pause.mp3 in Resources */,
 				4D66D7E41B71548E00009A76 /* coin.mp3 in Resources */,
+				4DD97D2E1B7646F700D012A7 /* bricksmash.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +301,7 @@
 				4D66D7E51B71548E00009A76 /* coin.mp3 in Resources */,
 				4D66D7EB1B71554E00009A76 /* oneup.mp3 in Resources */,
 				4D66D7E81B71550600009A76 /* jump.mp3 in Resources */,
+				4DD97D2F1B7646F700D012A7 /* bricksmash.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
