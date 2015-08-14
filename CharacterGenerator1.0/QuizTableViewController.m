@@ -12,7 +12,7 @@
 #import <AVFoundation/AVFoundation.h> // this allows us to include sounds! 
 
 
-@interface QuizTableViewController ()
+@interface QuizTableViewController () <UITextFieldDelegate>
 
 {
     AVAudioPlayer *_audioPlayer; // for jump sound
@@ -41,7 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.gamerTag.delegate = self;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -183,5 +183,10 @@
    
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"Zouf");
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end
