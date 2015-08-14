@@ -41,7 +41,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Tap Gesture
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
+    //gamerTag textField set delegate
     self.gamerTag.delegate = self;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -184,9 +191,12 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    NSLog(@"Zouf");
     [textField resignFirstResponder];
     return YES;
 }
 
+//selector for UIGestureRecognizer
+-(void)dismissKeyboard{
+    [self.gamerTag resignFirstResponder];
+}
 @end
